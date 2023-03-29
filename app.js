@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Check if the post content is not empty
             if (postContent.trim() !== '') {
                 // Create a new post element
+               
                 const newPost = document.createElement('div');
                 newPost.classList.add('post');
                 newPost.innerHTML = `
@@ -25,10 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p>${postContent}</p>
                         
                         <div class="post-actions">
-                        <a href="#" class="like-button">Like</a>
-                        <a href="#" class="like-count"></a>
-                        <a href="#">Share</a>
-                        <a class="comment-button" href="#">Comment</a>
+                        <button  class="like-button">Like</button>
+                        <button  class="like-count"></button>
+                        <button>Share</button>
+                        <button class="comment-button">Comment</button>
                         <div class="comment-section hidden">
                             <form>
                               <textarea placeholder="Add a comment..."></textarea>
@@ -36,7 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
                             </form>
                             <ul class="comment-list"></ul>
                           </div>
-                        </div>
+                        
+                    </div>
                     </div>
                 `;
                 // Insert the new post at the top of the feed
